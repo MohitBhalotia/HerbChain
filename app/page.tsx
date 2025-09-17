@@ -447,7 +447,11 @@ export default function HomePage() {
               Click the button below to access the full{" "}
               {navigationItems.find((item) => item.id === activeSection)?.label.toLowerCase()}.
             </p>
-            
+            <Button asChild className="bg-[#2E7D32] hover:bg-[#1B5E20]">
+              <Link href={navigationItems.find((item) => item.id === activeSection)?.href || "/"}>
+                Access {navigationItems.find((item) => item.id === activeSection)?.label}
+              </Link>
+            </Button>
           </div>
         )}
       </div>
